@@ -61,6 +61,8 @@ public class StockService {
         stockToUpdate.setDescription(stockToUpdateRequest.getDescription());
         stockToUpdate.setCurrentPrice(stockToUpdateRequest.getCurrentPrice());
 
+        stockToUpdate = stockRepository.save(stockToUpdate);
+
         return stockToUpdate;
     }
 
